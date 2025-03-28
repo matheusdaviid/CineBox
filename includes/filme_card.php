@@ -1,16 +1,22 @@
 <div class="col-lg-<?= isset($qntd) ? $qntd : 3 ?> col-md-6 col-sm-12">
-                    <figure>
-                            <a href="filmes-consultar.php"><img src="assets/img/poster/<?=$filme['poster'] ?>"
-                            alt="Poster do filme Avatar o caminho da água" class="foto_produto"></a>
-                        <figcaption>
-                            <h4><?=$filme['nome']?></h4>
-                            <span class="preco"><?=$filme['valor_ingresso']?></span>
-                            <p class="descricao"><?=$filme['descricao']?></p>
-                        </figcaption>
-                        <span class="genero">
-                            <?php foreach($dadosGeneros as $value2){ ?>
-                                <label style="background-color: #<?= $value2['cor'] ?>;"><?= $value2['nome'] ?></label>
-                            <?php } ?>
-                        </span>
-                    </figure>
-                </div>
+    <figure>
+        <a href="filmes-consultar.php?id=<?= $filme['id'] ?>">
+            <img src="assets/img/poster/<?= $filme['poster'] ?>" 
+                 alt="Poster do filme <?= $filme['nome'] ?>" class="foto_produto">
+        </a>
+        <figcaption>
+            <h4><?= $filme['nome'] ?></h4>
+            <span class="preco">R$ <?= number_format($filme['valor_ingresso'], 2, ',', '.') ?></span>
+            <p class="descricao"><?= substr($filme['descricao'], 0, 100) ?>...</p>
+        </figcaption>
+        <?php if(isset($dadosGenerosFilme) && !empty($dadosGenerosFilme)): ?>
+            <span class="genero">
+                <?php foreach($dadosGenerosFilme as $genero): ?>
+                    <label style="background-color: #<?= $genero['cor'] ?>;">
+                        <?= $genero['nome'] ?>
+                    </label>
+                <?php endforeach; ?>
+            </span>
+        <?php endif; ?>
+    </figure>
+</div>
