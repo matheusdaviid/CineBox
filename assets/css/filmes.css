@@ -1,0 +1,66 @@
+#filmes_recomendados>h2.titulo{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+
+#filmes_recomendados figure{
+    background-color: #d9d9d9;
+    padding: 15px 0;
+    width: 100%;
+    max-width: 400px;
+    height: 600px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#filmes_recomendados .foto_produto{
+    height: 95%;
+    width: 100%;
+    max-height: 380px;
+    max-width: 280px;
+    border-radius: 20px;
+    object-fit: cover;
+
+}
+
+#filmes_recomendados figcaption{
+    
+    padding: 0 10%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#filmes_recomendados figcaption h4{
+    margin-bottom: 0;
+    font-weight: 900;
+    text-align: start;
+    height: 55px;
+}
+
+#filmes_recomendados span.preco{
+    color: #9125A3;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: end;
+}
+
+#filmes_recomendados figcaption p{
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;    
+}
+
+#filmes_recomendados span.genero>label{
+    background-color: tomato;
+    color: #f2f2f2;
+    padding: 1px 5px;
+    border-radius: 10px;
+
+}
